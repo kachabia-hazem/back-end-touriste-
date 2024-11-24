@@ -1,0 +1,79 @@
+/* Réinitialiser les marges et les paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+  }
+  
+  body {
+    background-color: #c7ecee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style général du menu de sélection */
+  .select-menu {
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .select-menu input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* Liste des options */
+  .options-list {
+    position: absolute;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    margin-top: 14px;
+    padding: 0 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    transition: .4s linear .2s;
+    height: 0;
+  }
+  
+  .option {
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+  }
+  
+  .option:hover,
+  .option.selected {
+    color: #ff9100;
+    background-color: #f0f0f0;
+  }
+  
+  .location-icon {
+    color: orange; /* Icône colorée en orange */
+    font-size: 18px;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+  }
+  
+  .options-list::-webkit-scrollbar {
+    width: 4px;
+    background-color: #eee;
+  }
+  
+  .options-list::-webkit-scrollbar-thumb {
+    background-color: #ff9100;
+  }
+  
+  .options-list.active {
+    height: 180px;
+  }
